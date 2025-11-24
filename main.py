@@ -4,7 +4,7 @@ from stats import get_char_frequencies
 
 def main():
     # path = input("Enter the full path to the book text file:")
-    path = "./books/frankenstein.txt"
+    path = sys.argv[1]
     num_words = get_num_words(path)
     frequencies = get_char_frequencies(path)
 
@@ -23,5 +23,7 @@ def main():
     print("============= END ===============")
 
 if __name__ == "__main__":
-    print(sys.argv)
-    # main()
+    if len(sys.argv) != 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+    main()
