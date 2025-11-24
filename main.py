@@ -1,3 +1,4 @@
+import sys
 from stats import get_num_words
 from stats import get_char_frequencies
 
@@ -22,4 +23,5 @@ def main():
     print("============= END ===============")
 
 if __name__ == "__main__":
-    main()
+    print(sys.argv)
+    # main()
